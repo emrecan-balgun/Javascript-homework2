@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <style>
+        .bg-orange {
+            background-color: #f78501;
+        }
+
+        input {
+            width: 75%;
+            margin-right: 0;
+            padding: 10px;
+            border: none;
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #ekle {
+            width: 25%;
+            padding: 10px;
+            margin-left: 0;
+            background: #d9d9d9;
+            color: #555;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+
+        #ekle:hover {
+            background-color: #bbb;
+            color: #FFF;
+        }
+
+        ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            list-style-type: none;
+            font-size: 14px;
+            transition: 0.2s;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }   
+
+        ul li:nth-child(odd) {
+            background: #eee;
+        }
+
+        ul li:hover {
+            background: #ddd;
+        }
+
+        ul li.checked {
+            background: #276678;
+            color: #fff;
+            text-decoration: line-through;
+        }
+
+        ul li.checked::before {
+            content: "";
+            position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }     
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 bg-orange text-center">
+                <img src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png">
+                <h1 class="text-white">Yapılacaklar Listesi</h1>
+                <div class="input-group mb-4">
+                    <input type="text" name="yapilacakSey" id="yapilacakSey" placeholder="Bugün ne yapacaksın?">
+                    <span id="ekle" onclick="listeyeEkle()" style="background-color: #d9d9d9; color: #555;">Ekle</span>
+                </div>
+            </div>
+            <ul class="list-group" id="todoList" onclick="yapildiIsaretle()">
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+  <script src="todo-list.js"></script>
+</html>
