@@ -1,2 +1,2 @@
-#  Patika.dev | Javascript Odev-2 (Todo List)
+#  Patika.dev | Javascript Odev2 (Todo List)
 (Silme kısmı eksik, revize edilecektir)
