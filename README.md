@@ -1,2 +1,1 @@
-#  Patika.dev | Javascript Odev2 (Todo List)
-(Silme kısmı eksik, revize edilecektir)
+# Second Javascript homework (Todo list) within the scope of Patika
